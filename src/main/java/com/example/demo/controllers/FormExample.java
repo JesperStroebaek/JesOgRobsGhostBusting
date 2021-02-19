@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 @Controller
 public class FormExample {
+    // Showing how to create a form using thymeleaf
     @GetMapping(value = "/form-test")
     public String renderForm() {
         return "form";
