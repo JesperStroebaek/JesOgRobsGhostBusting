@@ -9,7 +9,7 @@ import java.util.ArrayList;
 @Controller
 public class FormExample {
     // Showing how to create a form using thymeleaf
-    @GetMapping(value = "/form-test")
+    @GetMapping(value = "/form")
     public String renderForm() {
         return "form";
     }
