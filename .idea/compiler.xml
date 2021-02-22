@@ -6,16 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="new-social-media" />
+        <module name="JesOgRobsGhostBusting" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="new-social-media" target="15" />
+      <module name="JesOgRobsGhostBusting" target="15" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="new-social-media" options="-parameters" />
+      <module name="JesOgRobsGhostBusting" options="-parameters" />
     </option>
   </component>
 </project>
