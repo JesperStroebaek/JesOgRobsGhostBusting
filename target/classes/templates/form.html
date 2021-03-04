@@ -1,13 +1,43 @@
+
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Forms12sem</title>
 </head>
+<header>
+    <h1>Jesper og Roberts</h1>
+    <h2>OogieBoogie Service</h2>
+
+</header>
+
 <body>
-<form action="">
-    <label for="name">Write your name</label>
-    <input type="text" id="name">
-</form>
+        <form action="/action_page.php">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+
+            <label for="date">Event date:</label><br>
+            <input type="date" id="date" name="date"><br><br>
+
+            <label for="einfo">Event Name:</label><br>
+            <input type="text" id="einfo" name="einfo"><br><br>
+            <label>Event Description</label><br>
+            <textarea id="w3review" name="w3review" rows="10" cols="70">
+Here you can descibe the full event:
+            </textarea>
+            <button type="submit">Submit</button>
+
+        </form>
+
+
+
+
+
 </body>
 </html>
+
+
+
+

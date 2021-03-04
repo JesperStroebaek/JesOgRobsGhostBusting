@@ -17,11 +17,12 @@ public class FormExample {
     @GetMapping(value="/list")
     @ResponseBody
     public ArrayList renderList() {
-        ArrayList<String> list = new ArrayList<>();
-        list.add("test");
-        list.add("orange");
+        ArrayList<String> mylist = new ArrayList<>();
+        mylist.add("test");
+        mylist.add("orange");
 
-        // This list gets returned as json!
-        return list;
+        return renderList();
     }
 }
+
+
