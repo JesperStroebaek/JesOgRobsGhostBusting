@@ -9,19 +9,19 @@ import java.util.ArrayList;
 @Controller
 public class FormExample {
     // Showing how to create a form using thymeleaf
-    @GetMapping(value = "/form")
+    @GetMapping(value = "/")
     public String renderForm() {
         return "form";
     }
 
     @GetMapping(value="/list")
     @ResponseBody
-    public ArrayList renderList() {
+    public ArrayList list() {
         ArrayList<String> mylist = new ArrayList<>();
-        mylist.add("test");
+        mylist.add("peel my");
         mylist.add("orange");
 
-        return renderList();
+        return mylist;
     }
 }
 
