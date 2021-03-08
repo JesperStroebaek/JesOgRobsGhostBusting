@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>succes</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<div id="header">
+    <header>
+        <h1>Succes.! Your event is registeret.</h1>
+        <h3>Below you can see what you posted:</h3>
+    </header>
+</div>
+<div id="body">
+<body>
+
+<p th:text="${'Event name: ' + event.getEinfo()}"></p>
+<p th:text="${'First name: ' + event.getFirstName()}"></p>
+<p th:text="${'Last name: ' + event.getLastName()}"></p>
+<p th:text="${'Event date: ' + event.getDate()}"></p>
+<p th:text="${'Your comment: ' + event.getEventinput()}"></p>
+
+
+</body>
+</div>
+</html>
