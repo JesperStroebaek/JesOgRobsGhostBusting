@@ -5,17 +5,17 @@ import java.util.ArrayList;
 
 public class Event {
     private String eventinput;
-    private String firstName;
-    private String lastName;
+    private String fname;
+    private String lname;
     private String date;
     private String einfo;
 
     // constructer.
-    public Event(String einfo, String firstName, String lastName, String date, String eventinput)
+    public Event(String einfo, String fname, String lname, String date, String eventinput)
     {
         this.einfo = einfo;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.fname = fname;
+        this.lname = lname;
         this.date = date;
         this.eventinput = eventinput;
 
@@ -23,8 +23,8 @@ public class Event {
 
     // Method Getter.
     public String getEinfo(){ return einfo; }
-    public String getFirstName() { return firstName; }
-    public String getLastName() { return lastName; }
+    public String getFirstName() { return fname; }
+    public String getLastName() { return lname; }
     public String getDate() { return date; }
     public String getEventinput() { return eventinput;}
 

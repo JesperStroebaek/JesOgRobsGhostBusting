@@ -6,17 +6,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 
 @Controller
 public class FormExample {
-    public String TemplateInputException(final String message, final String templateName, final Throwable cause) {
-        final String s = message + templateName + cause;
-        return s;
-    }
-    ArrayList<Event> eventList = new ArrayList<>();
+
+    ArrayList<Object> eventList = new ArrayList<>();
 
     @GetMapping("/") // @GetMapping tager imod en getrequest fra browseren.
     public String index()
@@ -25,15 +21,15 @@ public class FormExample {
     }
 
     @GetMapping("/form") // createWeekendEvents er den html fil der returneres (get).
-    public String weekendEventMethod()
+    public String form()
     {
         return "form";
     }
 
-    @PostMapping("/signUp")
-    public String signUp(@RequestParam("einfo") String einfo, @RequestParam("fname") String fname, @RequestParam("lname") String lname,@RequestParam("date") String date, @RequestParam("eventinput") String eventinput)
+    @PostMapping("/submitform")
+    public String submitform(@RequestParam("einfo") String einfo, @RequestParam("fname") String fname, @RequestParam("lname") String lname,@RequestParam("date") String date, @RequestParam("eventinput") String eventinput)
     {
-       Event eventlist = new Event(einfo, fname, lname, date, eventinput);
+       Object eventlist = new Event(einfo, fname, lname, date, eventinput);
         eventList.add(eventlist);
         return "redirect:/succes";
     }
@@ -41,15 +37,15 @@ public class FormExample {
     @GetMapping("/succes")
     public String succes(Model model)
     {
-        model.addAttribute("event", eventList.get(eventList.size()-1));
+        model.addAttribute("Event", eventList.get(eventList.size()-1));
         return "succes";
     }
 
-    @GetMapping("/overview")
-    public String overview(Model model)
+    @GetMapping("/dashboard")
+    public String dashboard(Model model)
     {
         model.addAttribute("events", eventList);
-        return "overview";
+        return "dashboard";
     }
 
 
