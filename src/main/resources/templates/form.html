@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +11,8 @@
     <img src="img/MiniBoogie.jpg"/>
 </header>
 <body>
-        <form action="/list">
+<div id="body">
+        <form oninput="ghosts.value=parseInt(a.value)+parseInt(b.value)" action="/succes" id="input" name="input">
             <label for="fname">First name:</label><br>
             <input type="text" id="fname" name="fname"><br>
             <label for="lname">Last name:</label><br>
@@ -21,14 +21,23 @@
             <input type="email" id="email" name="email"><br><br>
             <label for="einfo">Event Name:</label><br>
             <input type="text" id="einfo" name="einfo"><br><br>
+            <label for="Date">Date of event:</label><br>
+            <input type="date" id="date" name="date"><br><br>
+            <label for="b">Number of ghosts:</label>
+            <input type="range" id="a" value="50">
+            +<input type="number" id="b" value="1">
+            =<output name="ghosts" for="a">Ghosts</output>
+            <br><br>
+
+
             <label>Event Description</label><br>
-            <textarea id="w3review" name="w3review" rows="10" cols="70">
+            <textarea id="eventinput" name="eventinput" rows="10" cols="70">
 Here you can descibe the full event:
             </textarea>
             <button type="submit">Submit</button>
 
         </form>
-
+</div>
 
 
 

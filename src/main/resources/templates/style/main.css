@@ -12,11 +12,10 @@
 }
 
 
-body{
-    background-image: url(templates/img/Halloween.jpg);
+#body{
+    background-image: url("templates/img/Halloween.jpg");
     padding: 400px 100px;
     margin: 100px;
-
     background-size: cover;
     background-position: center;
 }
